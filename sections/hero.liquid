@@ -1,0 +1,146 @@
+<link href="{{ '../assets/hero.css' | asset_url }}" rel="stylesheet" type="text/css">
+<link href="{{ '../assets/typography.css' | asset_url }}" rel="stylesheet" type="text/css">
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-images">
+      <div class="hero-inner">
+        <h1 class="hero-title heading-1">{{ section.settings['heading-1'] }}</h1>
+        <h2 class="italic-heading heading-1">{{ section.settings['heading-2'] }}</h2>
+        <p class="hero-description p-1">
+          {{ section.settings.paragraph }}
+        </p>
+        <div class="btn-mini-images">
+          <button class="hero-cta p-1">{{ section.settings['hero-button'] }}</button>
+          <div class="mini-images">
+            <img src="{{ section.settings.Client_1 | image_url: width: 200 }}" alt="Client Image 1">
+            <img src="{{ section.settings.Client_2 | image_url: width: 200 }}" alt="Client Image 2">
+            <img src="{{ section.settings.Client_3 | image_url: width: 200 }}" alt="Client Image 3">
+            <img src="{{ section.settings.Client_4 | image_url: width: 200 }}" alt="Client Image 4">
+          </div>
+        </div>
+      </div>
+      <div class="gallery-grid">
+        <div
+          class="grid-image"
+          style="--desktop-row: auto / span  3; --desktop-column: auto / span; --tablet-row: auto / span  3; --tablet-column: auto / span; --mobile-row: auto / span  2; --mobile-column: auto / span 3; "
+        >
+          <img src="/images/hero-1.png" alt="">
+        </div>
+        <div
+          class="grid-image"
+          style="--desktop-row: auto / span 2; --desktop-column: auto / span 1; --tablet-row: auto / span 2; --tablet-column: auto / span 1; --mobile-row: auto / span 2; --mobile-column: auto / span 5;"
+        >
+          <img src="/images/hero-2.png" alt="">
+          <div class="box-2-banner-text">
+            <h5 class="heading-5">Lorem ipsum dolor sit amet</h5>
+            <p class="p-5">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem
+              placerat.
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid-image hidden-on-phone"
+          style="--desktop-row: auto / span 3; --desktop-column: auto / span 1; --tablet-row: auto / span 3; --tablet-column: auto / span 1; --mobile-row: auto / span 3; --mobile-column: auto / span 1"
+        >
+          <img src="/images/hero-3.png" alt="">
+        </div>
+        <div
+          class="grid-image"
+          style="--desktop-row: auto / span 3; --desktop-column: auto / span 1;  --tablet-row: auto / span 3; --tablet-column: auto / span 1; --mobile-row: auto / span 2; --mobile-column: 6 / span 3"
+        >
+          <img src="/images/hero-5.png" alt="">
+        </div>
+        <div
+          class="grid-image"
+          style="--desktop-row: auto / span 2; --desktop-column: auto / span 1; --tablet-row: auto / span 2; --tablet-column: auto / span 1; --mobile-row: 3 / span 2; --mobile-column: auto / span 5"
+        >
+          <img src="/images/hero-4.png" alt="">
+          <div class="box-4-banner-text">
+            <h5 class="heading-5">Lorem ipsum dolor sit amet</h5>
+            <p class="p-5">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem
+              placerat.
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid-image"
+          style="--desktop-row: auto / span 2; --desktop-column: auto / span 1;  --tablet-row: auto / span 2; --tablet-column: auto / span 1;  --mobile-row: auto / span 2; --mobile-column: auto / span 8"
+        >
+          <img src="/images/hero-6.png" alt="">
+          <div class="box-6-banner-text">
+            <h5 class="heading-5">Lorem ipsum dolor sit amet</h5>
+            <p class="p-5">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem
+              placerat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Upload Logo"
+    },
+    {
+      "type": "text",
+      "id": "heading-1",
+      "label": "heading-1",
+      "default": "Lorem ipsum dolor sit amet consectetur"
+    },
+    {
+      "type": "text",
+      "id": "heading-2",
+      "label": "heading 2",
+      "default": "adipiscing elit quisque faucibus ex sapien vitae."
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "paragraph",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "type": "text",
+      "id": "hero-button",
+      "label": "Hero button",
+      "default": "Free consultation"
+    },
+    {
+      "type": "image_picker",
+      "id": "Client_1",
+      "label": "Client 1 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "Client_2",
+      "label": "Client 2 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "Client_3",
+      "label": "Client 3 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "Client_4",
+      "label": "Client 4 Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

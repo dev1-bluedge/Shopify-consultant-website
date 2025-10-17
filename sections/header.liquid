@@ -1,0 +1,96 @@
+<link href="{{ 'header.css' | asset_url }}" rel="stylesheet" type="text/css">
+<link href="{{ '../assets/typography.css' | asset_url }}" rel="stylesheet" type="text/css">
+<script src="{{ 'theme.js' | asset_url }}"></script>
+
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <div class="logo-icon">
+          <a href="{{ routes.root_url }}">
+            {% if section.settings.logo %}
+              <img src="{{ section.settings.logo | image_url: width: 200 }}" alt="Site Logo" class="logo-icon">
+            {% else %}
+              <span>{{ shop.name }}</span>
+            {% endif %}
+          </a>
+        </div>
+      </div>
+
+      <div class="header-inner">
+        <nav class="nav">
+          <ul class="nav-list p-1">
+            {% for link in linklists['main-menu-1'].links %}
+              <li>
+                <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <button class="cta-btn p-3">{{ section.settings['button-text'] }}</button>
+      </div>
+
+      <button class="mobile-menu-btn mobile-menu-toggle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu">
+    <div class="cross-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Close">
+        <path d="M18 6 L6 18 M6 6 L18 18" stroke="black" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" fill="none" />
+      </svg>
+    </div>
+    <div class="logo-icon">
+      {% if section.settings.logo %}
+        <img src="{{ section.settings.logo | image_url: width: 200 }}" alt="Site Logo" class="logo-icon">
+      {% else %}
+        <span>{{ shop.name }}</span>
+      {% endif %}
+    </div>
+    <ul class="mobile-menu-list p-1">
+      <li class="first-child"><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/career/">Career</a></li>
+      <li><a href="/business">Portfolio</a></li>
+      <li><a href="/contact">Contact us</a></li>
+      <li><a href="/services">Services</a></li>
+    </ul>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Upload Logo"
+    },
+    {
+      "type": "text",
+      "id": "button-text",
+      "label": "Button text",
+      "default": "Get in touch"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header"
+    }
+  ]
+}
+{% endschema %}

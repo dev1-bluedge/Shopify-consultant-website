@@ -1,0 +1,468 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inria";
+  src: url("/fonts/InriaSerif-Italic.ttf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--default-font-family-Inter);
+}
+
+:root {
+  --default-font-family-Inter: "Inter", Arial, Helvetica, sans-serif;
+  --default-font-family-Poppins: "Poppins", Arial, Helvetica, sans-serif;
+  --default-font-family-Inria: "Inria", Arial, Helvetica, sans-serif;
+  --section-padding: 2rem 0rem;
+  --section-margin: 2rem 0rem;
+  --section-width: 95%;
+
+  --desktop-font-size-large-banner: 70px;
+  --desktop-line-height-large-banner: 3.8rem;
+  --desktop-font-weight-large-banner: bold;
+  --desktop-font-family-large-banner: "Inter", Arial, Helvetica, sans-serif;
+  --desktop-letter-spacing-large-banner: 0.5px;
+
+  --desktop-font-size-h1: 48px;
+  --desktop-line-height-h1: 3rem;
+  --desktop-font-weight-h1: bold;
+  --desktop-font-family-h1: "Inter", Arial, Helvetica, sans-serif;
+  --desktop-letter-spacing-h1: 0.5px;
+
+  --desktop-font-size-h2: 36px;
+  --desktop-line-height-h2: 2.5rem;
+  --desktop-font-weight-h2: bold;
+  --desktop-font-family-h2: "Inter", Arial, Helvetica, sans-serif;
+  --desktop-letter-spacing-h2: 0.4px;
+
+  --desktop-font-size-h3: 28px;
+  --desktop-line-height-h3: 1.4rem;
+  --desktop-font-weight-h3: 500;
+  --desktop-font-family-h3: "Inter", Arial, Helvetica, sans-serif;
+  --desktop-letter-spacing-h3: 0.3px;
+
+  --desktop-font-size-h4: 22px;
+  --desktop-line-height-h4: 1.3rem;
+  --desktop-font-weight-h4: 500;
+  --desktop-font-family-h4: "Inter", Arial, Helvetica, sans-serif;
+  --desktop-letter-spacing-h4: 0.2px;
+
+  --desktop-font-size-h5: 18px;
+  --desktop-line-height-h5: 1.3rem;
+  --desktop-font-weight-h5: bold;
+  --desktop-font-family-h5: "Inter", Arial, Helvetica, sans-serif;
+  --desktop-letter-spacing-h5: 0.2px;
+
+  --desktop-font-size-h6: 16px;
+  --desktop-line-height-h6: 1.7rem;
+  --desktop-font-weight-h6: 500;
+  --desktop-font-family-h6: "Inter", Arial, Helvetica, sans-serif;
+  --desktop-letter-spacing-h6: 0.1px;
+
+  --desktop-font-size-p1: 18px;
+  --desktop-line-height-p1: 1.6rem;
+  --desktop-font-weight-p1: 500;
+  --desktop-font-family-p1: "Poppins", Arial, Helvetica, sans-serif;
+  --desktop-letter-spacing-p1: 0px;
+
+  --desktop-font-size-p2: 16px;
+  --desktop-line-height-p2: 1.6rem;
+  --desktop-font-weight-p2: 500;
+  --desktop-font-family-p2: "Poppins", Arial, Helvetica, sans-serif;
+  --desktop-letter-spacing-p2: 0px;
+
+  --desktop-font-size-p3: 14px;
+  --desktop-line-height-p3: 1.2rem;
+  --desktop-font-weight-p3: 500;
+  --desktop-font-family-p3: "Poppins", Arial, Helvetica, sans-serif;
+  --desktop-letter-spacing-p3: 0px;
+
+  --desktop-font-size-p4: 12px;
+  --desktop-font-weight-p4: 500;
+  --desktop-line-height-p4: 1.2rem;
+  --desktop-font-family-p4: "Poppins", Arial, Helvetica, sans-serif;
+  --desktop-letter-spacing-p4: 0.2px;
+
+  /* Tablet variables */
+  --tablet-font-size-large-banner: 38px;
+  --tablet-font-weight-large-banner: bold;
+  --tablet-line-height-large-banner: 2rem;
+  --tablet-font-family-large-banner: "Inter", Arial, Helvetica, sans-serif;
+  --tablet-letter-spacing-large-banner: 0px;
+
+  --tablet-font-size-h1: 28px;
+  --tablet-font-weight-h1: bold;
+  --tablet-line-height-h1: 2rem;
+  --tablet-font-family-h1: "Inter", Arial, Helvetica, sans-serif;
+  --tablet-letter-spacing-h1: 0px;
+
+  --tablet-font-size-h2: 24px;
+  --tablet-font-weight-h2: bold;
+  --tablet-line-height-h2: 2rem;
+  --tablet-font-family-h2: "Inter", Arial, Helvetica, sans-serif;
+  --tablet-letter-spacing-h2: 0px;
+
+  --tablet-font-size-h3: 20px;
+  --tablet-font-weight-h3: 500;
+  --tablet-line-height-h3: 1.3rem;
+  --tablet-font-family-h3: "Inter", Arial, Helvetica, sans-serif;
+  --tablet-letter-spacing-h3: 0px;
+
+  --tablet-font-size-h4: 18px;
+  --tablet-font-weight-h4: 500;
+  --tablet-line-height-h4: 1.3rem;
+  --tablet-font-family-h4: "Inter", Arial, Helvetica, sans-serif;
+  --tablet-letter-spacing-h4: 0px;
+
+  --tablet-font-size-h5: 16px;
+  --tablet-font-weight-h5: bold;
+  --tablet-line-height-h5: 1.3rem;
+  --tablet-font-family-h5: "Inter", Arial, Helvetica, sans-serif;
+  --tablet-letter-spacing-h5: 0px;
+
+  --tablet-font-size-p1: 16px;
+  --tablet-font-weight-p1: 500;
+  --tablet-line-height-p1: 1.6rem;
+  --tablet-font-family-p1: "Poppins", Arial, Helvetica, sans-serif;
+  --tablet-letter-spacing-p1: 0px;
+
+  --tablet-font-size-p2: 15px;
+  --tablet-font-weight-p2: 500;
+  --tablet-line-height-p2: 1.6rem;
+  --tablet-font-family-p2: "Poppins", Arial, Helvetica, sans-serif;
+  --tablet-letter-spacing-p2: 0px;
+
+  --tablet-font-size-p3: 14px;
+  --tablet-font-weight-p3: 500;
+  --tablet-line-height-p3: 1.2rem;
+  --tablet-font-family-p3: "Poppins", Arial, Helvetica, sans-serif;
+  --tablet-letter-spacing-p3: 0px;
+
+  --tablet-font-size-p4: 12px;
+  --tablet-font-weight-p4: 500;
+  --tablet-line-height-p4: 1.2rem;
+  --tablet-font-family-p4: "Poppins", Arial, Helvetica, sans-serif;
+  --tablet-letter-spacing-p4: 0px;
+
+  /* Mobile variable */
+  --mobile-font-size-large-banner: 28px;
+  --mobile-font-weight-large-banner: bold;
+  --mobile-line-height-large-banner: 1.8rem;
+  --mobile-font-family-large-banner: "Inter", Arial, Helvetica, sans-serif;
+  --mobile-letter-spacing-large-banner: 0px;
+
+  --mobile-font-size-h1: 22px;
+  --mobile-font-weight-h1: bold;
+  --mobile-line-height-h1: 2rem;
+  --mobile-font-family-h1: "Inter", Arial, Helvetica, sans-serif;
+  --mobile-letter-spacing-h1: 0px;
+
+  --mobile-font-size-h2: 20px;
+  --mobile-font-weight-h2: bold;
+  --mobile-line-height-h2: 1.3rem;
+  --mobile-font-family-h2: "Inter", Arial, Helvetica, sans-serif;
+  --mobile-letter-spacing-h2: 0px;
+
+  --mobile-font-size-h3: 18px;
+  --mobile-font-weight-h3: 500;
+  --mobile-line-height-h3: 1.3rem;
+  --mobile-font-family-h3: "Inter", Arial, Helvetica, sans-serif;
+  --mobile-letter-spacing-h3: 0px;
+
+  --mobile-font-size-h4: 16px;
+  --mobile-font-weight-h4: 500;
+  --mobile-line-height-h4: 1.3rem;
+  --mobile-font-family-h4: "Inter", Arial, Helvetica, sans-serif;
+  --mobile-letter-spacing-h4: 0px;
+
+  --mobile-font-size-h5: 14px;
+  --mobile-font-weight-h5: bold;
+  --mobile-line-height-h5: 1.3rem;
+  --mobile-font-family-h5: "Inter", Arial, Helvetica, sans-serif;
+  --mobile-letter-spacing-h5: 0px;
+
+  --mobile-font-size-p1: 16px;
+  --mobile-font-weight-p1: 500;
+  --mobile-line-height-p1: 1.6rem;
+  --mobile-font-family-p1: "Poppins", Arial, Helvetica, sans-serif;
+  --mobile-letter-spacing-p1: 0px;
+
+  --mobile-font-size-p2: 14px;
+  --mobile-font-weight-p2: 500;
+  --mobile-line-height-p2: 1.2rem;
+  --mobile-font-family-p2: "Poppins", Arial, Helvetica, sans-serif;
+  --mobile-letter-spacing-p2: 0px;
+
+  --mobile-font-size-p3: 12px;
+  --mobile-font-weight-p3: 500;
+  --mobile-line-height-p3: 1.2rem;
+  --mobile-font-family-p3: "Poppins", Arial, Helvetica, sans-serif;
+  --mobile-letter-spacing-p3: 0px;
+
+  --mobile-font-size-p4: 14px;
+  --mobile-font-weight-p4: 500;
+  --mobile-line-height-p4: 1.2rem;
+  --mobile-font-family-p4: "Poppins", Arial, Helvetica, sans-serif;
+  --mobile-letter-spacing-p4: 0px;
+
+  /* colours */
+  --primary-color: #1e4ba3;
+  --secondary-color: #051229;
+  --White: #ffffff;
+}
+
+/* for desktop responsive */
+.large-banner {
+  font-size: var(--desktop-font-size-large-banner);
+  font-weight: var(--desktop-font-weight-large-banner);
+  line-height: var(--desktop-line-height-large-banner);
+  font-family: var(--desktop-font-family-large-banner);
+  letter-spacing: var(--desktop-letter-spacing-large-banner);
+}
+
+.heading-1 {
+  font-size: var(--desktop-font-size-h1);
+  font-weight: var(--desktop-font-weight-h1);
+  line-height: var(--desktop-line-height-h1);
+  font-family: var(--desktop-font-family-h1);
+  letter-spacing: var(--desktop-letter-spacing-h1);
+}
+
+.heading-2 {
+  font-size: var(--desktop-font-size-h2);
+  font-weight: var(--desktop-font-weight-h2);
+  line-height: var(--desktop-line-height-h2);
+  font-family: var(--desktop-font-family-h2);
+  letter-spacing: var(--desktop-letter-spacing-h2);
+}
+
+.heading-3 {
+  font-size: var(--desktop-font-size-h3);
+  font-weight: var(--desktop-font-weight-h3);
+  line-height: var(--desktop-line-height-h3);
+  font-family: var(--desktop-font-family-h3);
+  letter-spacing: var(--desktop-letter-spacing-h3);
+}
+
+.heading-4 {
+  font-size: var(--desktop-font-size-h4);
+  font-weight: var(--desktop-font-weight-h4);
+  line-height: var(--desktop-line-height-h4);
+  font-family: var(--desktop-font-family-h4);
+  letter-spacing: var(--desktop-letter-spacing-h4);
+}
+
+.heading-5 {
+  font-size: var(--desktop-font-size-h5);
+  font-weight: var(--desktop-font-weight-h5);
+  line-height: var(--desktop-line-height-h5);
+  font-family: var(--desktop-font-family-h5);
+  letter-spacing: var(--desktop-letter-spacing-h5);
+}
+.p-1 {
+  font-size: var(--desktop-font-size-p1);
+  font-weight: var(--desktop-font-weight-p1);
+  line-height: var(--desktop-line-height-p1);
+  font-family: var(--desktop-font-family-p1);
+  letter-spacing: var(--desktop-letter-spacing-p1);
+}
+.p-2 {
+  font-size: var(--desktop-font-size-p2);
+  font-weight: var(--desktop-font-weight-p2);
+  line-height: var(--desktop-line-height-p2);
+  font-family: var(--desktop-font-family-p2);
+  letter-spacing: var(--desktop-letter-spacing-p2);
+}
+.p-3 {
+  font-size: var(--desktop-font-size-p3);
+  font-weight: var(--desktop-font-weight-p3);
+  line-height: var(--desktop-line-height-p3);
+  font-family: var(--desktop-font-family-p3);
+  letter-spacing: var(--desktop-letter-spacing-p3);
+}
+.p-4 {
+  font-size: var(--desktop-font-size-p4);
+  font-weight: var(--desktop-font-weight-p4);
+  line-height: var(--desktop-line-height-p4);
+  font-family: var(--desktop-font-family-p4);
+  letter-spacing: var(--desktop-letter-spacing-p4);
+}
+
+/* for tablet responsive */
+@media screen and (max-width: 786px) {
+  .large-banner {
+    font-size: var(--tablet-font-size-large-banner);
+    font-weight: var(--tablet-font-weight-large-banner);
+    line-height: var(--tablet-line-height-large-banner);
+    font-family: var(--tablet-font-family-large-banner);
+    letter-spacing: var(--tablet-letter-spacing-large-banner);
+  }
+
+  .heading-1 {
+    font-size: var(--tablet-font-size-h1);
+    font-weight: var(--tablet-font-weight-h1);
+    line-height: var(--tablet-line-height-h1);
+    font-family: var(--tablet-font-family-h1);
+    letter-spacing: var(--tablet-letter-spacing-h1);
+  }
+
+  .heading-2 {
+    font-size: var(--tablet-font-size-h2);
+    font-weight: var(--tablet-font-weight-h2);
+    line-height: var(--tablet-line-height-h2);
+    font-family: var(--tablet-font-family-h2);
+    letter-spacing: var(--tablet-letter-spacing-h2);
+  }
+
+  .heading-3 {
+    font-size: var(--tablet-font-size-h3);
+    font-weight: var(--tablet-font-weight-h3);
+    line-height: var(--tablet-line-height-h3);
+    font-family: var(--tablet-font-family-h3);
+    letter-spacing: var(--tablet-letter-spacing-h3);
+  }
+
+  .heading-4 {
+    font-size: var(--tablet-font-size-h4);
+    font-weight: var(--tablet-font-weight-h4);
+    line-height: var(--tablet-line-height-h4);
+    font-family: var(--tablet-font-family-h4);
+    letter-spacing: var(--tablet-letter-spacing-h4);
+  }
+
+  .heading-5 {
+    font-size: var(--tablet-font-size-h5);
+    font-weight: var(--tablet-font-weight-h5);
+    line-height: var(--tablet-line-height-h5);
+    font-family: var(--tablet-font-family-h5);
+    letter-spacing: var(--tablet-letter-spacing-h5);
+  }
+  .p-1 {
+    font-size: var(--tablet-font-size-p1);
+    font-weight: var(--tablet-font-weight-p1);
+    line-height: var(--tablet-line-height-p1);
+    font-family: var(--tablet-font-family-p1);
+    letter-spacing: var(--tablet-letter-spacing-p1);
+  }
+  .p-2 {
+    font-size: var(--tablet-font-size-p2);
+    font-weight: var(--tablet-font-weight-p2);
+    line-height: var(--tablet-line-height-p2);
+    font-family: var(--tablet-font-family-p2);
+    letter-spacing: var(--tablet-letter-spacing-p2);
+  }
+  .p-3 {
+    font-size: var(--tablet-font-size-p3);
+    font-weight: var(--tablet-font-weight-p3);
+    line-height: var(--tablet-line-height-p3);
+    font-family: var(--tablet-font-family-p3);
+    letter-spacing: var(--tablet-letter-spacing-p3);
+  }
+  .p-4 {
+    font-size: var(--tablet-font-size-p4);
+    font-weight: var(--tablet-font-weight-p4);
+    line-height: var(--tablet-line-height-p4);
+    font-family: var(--tablet-font-family-p4);
+    letter-spacing: var(--tablet-letter-spacing-p4);
+  }
+}
+
+/* for mobile responsive */
+@media screen and (max-width: 480px) {
+  .large-banner {
+    font-size: var(--mobile-font-size-large-banner);
+    font-weight: var(--mobile-font-weight-large-banner);
+    line-height: var(--mobile-line-height-large-banner);
+    font-family: var(--mobile-font-family-large-banner);
+    letter-spacing: var(--mobile-letter-spacing-large-banner);
+  }
+
+  .heading-1 {
+    font-size: var(--mobile-font-size-h1);
+    font-weight: var(--mobile-font-weight-h1);
+    line-height: var(--mobile-line-height-h1);
+    font-family: var(--mobile-font-family-h1);
+    letter-spacing: var(--mobile-letter-spacing-h1);
+  }
+
+  .heading-2 {
+    font-size: var(--mobile-font-size-h2);
+    font-weight: var(--mobile-font-weight-h2);
+    line-height: var(--mobile-line-height-h2);
+    font-family: var(--mobile-font-family-h2);
+    letter-spacing: var(--mobile-letter-spacing-h2);
+  }
+
+  .heading-3 {
+    font-size: var(--mobile-font-size-h3);
+    font-weight: var(--mobile-font-weight-h3);
+    line-height: var(--mobile-line-height-h3);
+    font-family: var(--mobile-font-family-h3);
+    letter-spacing: var(--mobile-letter-spacing-h3);
+  }
+
+  .heading-4 {
+    font-size: var(--mobile-font-size-h4);
+    font-weight: var(--mobile-font-weight-h4);
+    line-height: var(--mobile-line-height-h4);
+    font-family: var(--mobile-font-family-h4);
+    letter-spacing: var(--mobile-letter-spacing-h4);
+  }
+
+  .heading-5 {
+    font-size: var(--mobile-font-size-h5);
+    font-weight: var(--mobile-font-weight-h5);
+    line-height: var(--mobile-line-height-h5);
+    font-family: var(--mobile-font-family-h5);
+    letter-spacing: var(--mobile-letter-spacing-h5);
+  }
+  .p-1 {
+    font-size: var(--mobile-font-size-p1);
+    font-weight: var(--mobile-font-weight-p1);
+    line-height: var(--mobile-line-height-p1);
+    font-family: var(--mobile-font-family-p1);
+    letter-spacing: var(--mobile-letter-spacing-p1);
+  }
+  .p-2 {
+    font-size: var(--mobile-font-size-p2);
+    font-weight: var(--mobile-font-weight-p2);
+    line-height: var(--mobile-line-height-p2);
+    font-family: var(--mobile-font-family-p2);
+    letter-spacing: var(--mobile-letter-spacing-p2);
+  }
+  .p-3 {
+    font-size: var(--mobile-font-size-p3);
+    font-weight: var(--mobile-font-weight-p3);
+    line-height: var(--mobile-line-height-p3);
+    font-family: var(--mobile-font-family-p3);
+    letter-spacing: var(--mobile-letter-spacing-p3);
+  }
+  .p-4 {
+    font-size: var(--mobile-font-size-p4);
+    font-weight: var(--mobile-font-weight-p4);
+    line-height: var(--mobile-line-height-p4);
+    font-family: var(--mobile-font-family-p4);
+    letter-spacing: var(--mobile-letter-spacing-p4);
+  }
+}

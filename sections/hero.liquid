@@ -13,10 +13,12 @@
         <div class="btn-mini-images">
           <button class="hero-cta p-1">{{ section.settings['hero-button'] }}</button>
           <div class="mini-images">
-            <img src="{{ section.settings.Client_1 | image_url: width: 200 }}" alt="Client Image 1">
-            <img src="{{ section.settings.Client_2 | image_url: width: 200 }}" alt="Client Image 2">
-            <img src="{{ section.settings.Client_3 | image_url: width: 200 }}" alt="Client Image 3">
-            <img src="{{ section.settings.Client_4 | image_url: width: 200 }}" alt="Client Image 4">
+            {% for block in section.blocks %}
+              <img
+                src="{{ block.settings.client_image | img_url: '600x600' }}"
+                alt="{{ block.settings.alt_text | escape }}"
+              >
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -25,18 +27,17 @@
           class="grid-image"
           style="--desktop-row: auto / span  3; --desktop-column: auto / span; --tablet-row: auto / span  3; --tablet-column: auto / span; --mobile-row: auto / span  2; --mobile-column: auto / span 3; "
         >
-          <img src="/images/hero-1.png" alt="">
+          <img src="{{  section.settings.banner_1_image | image_url: width: 600 }}" alt="Banner-1">
         </div>
         <div
           class="grid-image"
           style="--desktop-row: auto / span 2; --desktop-column: auto / span 1; --tablet-row: auto / span 2; --tablet-column: auto / span 1; --mobile-row: auto / span 2; --mobile-column: auto / span 5;"
         >
-          <img src="/images/hero-2.png" alt="">
+          <img src="{{  section.settings.banner_2_image | image_url: width: 600 }}" alt="Banner-2">
           <div class="box-2-banner-text">
-            <h5 class="heading-5">Lorem ipsum dolor sit amet</h5>
+            <h5 class="heading-5">{{ section.settings.banner_2_text }}</h5>
             <p class="p-5">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem
-              placerat.
+              {{ section.settings.banner_2_description }}
             </p>
           </div>
         </div>
@@ -44,24 +45,26 @@
           class="grid-image hidden-on-phone"
           style="--desktop-row: auto / span 3; --desktop-column: auto / span 1; --tablet-row: auto / span 3; --tablet-column: auto / span 1; --mobile-row: auto / span 3; --mobile-column: auto / span 1"
         >
-          <img src="/images/hero-3.png" alt="">
+          <img src="{{  section.settings.banner_3_image | image_url: width: 600 }}" alt="Banner-3">
         </div>
         <div
           class="grid-image"
           style="--desktop-row: auto / span 3; --desktop-column: auto / span 1;  --tablet-row: auto / span 3; --tablet-column: auto / span 1; --mobile-row: auto / span 2; --mobile-column: 6 / span 3"
         >
-          <img src="/images/hero-5.png" alt="">
+          <img src="{{  section.settings.banner_5_image | image_url: width: 600 }}" alt="Banner-5">
         </div>
         <div
           class="grid-image"
           style="--desktop-row: auto / span 2; --desktop-column: auto / span 1; --tablet-row: auto / span 2; --tablet-column: auto / span 1; --mobile-row: 3 / span 2; --mobile-column: auto / span 5"
         >
-          <img src="/images/hero-4.png" alt="">
+          <img src="{{  section.settings.banner_4_image | image_url: width: 600 }}" alt="Banner-4">
           <div class="box-4-banner-text">
-            <h5 class="heading-5">Lorem ipsum dolor sit amet</h5>
+            <h5 class="heading-5">{{ section.settings.banner_4_heading | default: 'Lorem ipsum dolor sit amet' }}</h5>
             <p class="p-5">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem
-              placerat.
+              {{
+                section.settings.banner_4_description
+                | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.'
+              }}
             </p>
           </div>
         </div>
@@ -69,12 +72,14 @@
           class="grid-image"
           style="--desktop-row: auto / span 2; --desktop-column: auto / span 1;  --tablet-row: auto / span 2; --tablet-column: auto / span 1;  --mobile-row: auto / span 2; --mobile-column: auto / span 8"
         >
-          <img src="/images/hero-6.png" alt="">
+          <img src="{{  section.settings.banner_6_image | image_url: width: 600 }}" alt="Banner-6">
           <div class="box-6-banner-text">
-            <h5 class="heading-5">Lorem ipsum dolor sit amet</h5>
+            <h5 class="heading-5">{{ section.settings.banner_6_heading | default: 'Lorem ipsum dolor sit amet' }}</h5>
             <p class="p-5">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem
-              placerat.
+              {{
+                section.settings.banner_6_description
+                | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.'
+              }}
             </p>
           </div>
         </div>
@@ -87,11 +92,6 @@
 {
   "name": "Hero",
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "logo",
-      "label": "Upload Logo"
-    },
     {
       "type": "text",
       "id": "heading-1",
@@ -118,28 +118,95 @@
     },
     {
       "type": "image_picker",
-      "id": "Client_1",
-      "label": "Client 1 Image"
+      "id": "banner_1_image",
+      "label": "Banner 1 Image"
     },
     {
       "type": "image_picker",
-      "id": "Client_2",
-      "label": "Client 2 Image"
+      "id": "banner_2_image",
+      "label": "Banner 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_2_text",
+      "label": "Banner 2 Text",
+      "default": "Lorem ipsum dolor sit amet"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_2_description",
+      "label": "Banner 2 Description",
+      "default": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat."
     },
     {
       "type": "image_picker",
-      "id": "Client_3",
-      "label": "Client 3 Image"
+      "id": "banner_3_image",
+      "label": "Banner 3 Image"
     },
     {
       "type": "image_picker",
-      "id": "Client_4",
-      "label": "Client 4 Image"
+      "id": "banner_4_image",
+      "label": "Banner 4 Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_4_heading",
+      "label": "Banner 4 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_4_description",
+      "label": "Banner 4 Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_5_image",
+      "label": "Banner 5 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_6_image",
+      "label": "Banner 6 Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_6_heading",
+      "label": "Banner 6 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_6_description",
+      "label": "Banner 6 Description"
     }
   ],
+  "blocks": [
+    {
+      "type": "client_logo",
+      "name": "Client Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "client_image",
+          "label": "Upload Client Logo"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text",
+          "default": "Client Logo"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
   "presets": [
     {
-      "name": "Hero"
+      "name": "Hero",
+      "blocks": [
+        {
+          "type": "client_logo"
+        }
+      ]
     }
   ]
 }

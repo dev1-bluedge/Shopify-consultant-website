@@ -1,0 +1,146 @@
+<link href="{{ '../assets/stats.css' | asset_url }}" rel="stylesheet" type="text/css">
+<link href="{{ '../assets/typography.css' | asset_url }}" rel="stylesheet" type="text/css">
+
+<section class="stats-section">
+  <div class="container">
+    <img src="/images/vector.png" alt="" class="stats-vector-image">
+    <div class="stats-grid">
+      <div class="stats-text">
+        <div class="stats-text-heading">
+          <h1 class="heading-1">
+            {{ section.settings.heading_1 | default: 'Lorem ipsum dolor sit amet consectetur' }}
+          </h1>
+          <h2 class="italic-stats heading-2">
+            {{ section.settings.heading_2 | default: 'faucibus ut sapien vitae pellentesque.' }}
+          </h2>
+        </div>
+        <p class="p-1 stats-text-description">
+          {{
+            section.settings.paragraph
+            | default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
+          }}
+        </p>
+        <button class="stats-text-btn">{{ section.settings.button_text | default: 'Book now' }}</button>
+      </div>
+
+      <div class="stats-cards">
+        <div class="stat-card">
+          <div class="stat-card-first-child">
+            <div class="stat-number heading-1">{{ section.settings.range_1 | default: '10' }}</div>
+            <div class="stat-label heading-6">{{ section.settings.sub_heading_1 | default: 'worldwide' }}</div>
+            <div class="blue-dot"></div>
+          </div>
+          <div class="stat-description p-1">
+            {{
+              section.settings.paragraph_1
+              | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.'
+            }}
+          </div>
+        </div>
+        <div class="stat-card blue">
+          <div class="stat-card-first-child">
+            <div class="stat-number heading-1">{{ section.settings.range_2 | default: '85x' }}</div>
+            <div class="heading-6">{{ section.settings.sub_heading_2 | default: 'Faster growth' }}</div>
+            <div class="white-dot"></div>
+          </div>
+          <div class="stat-description p-1">
+            {{
+              section.settings.paragraph_2
+              | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.'
+            }}
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-first-child">
+            <div class="stat-number heading-1">{{ section.settings.range_3 | default: '75+' }}</div>
+            <div class="stat-label heading-6">{{ section.settings.sub_heading_3 | default: 'Awards' }}</div>
+            <div class="blue-dot"></div>
+          </div>
+          <div class="stat-description p-1">
+            {{
+              section.settings.paragraph_3
+              | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.'
+            }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Stats",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Heading 1"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Heading 2"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "text",
+      "id": "range_1",
+      "label": "Box 1 range"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading_1",
+      "label": "Sub heading"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph_1",
+      "label": "Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "range_2",
+      "label": "Box 2 range"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading_2",
+      "label": "Sub heading"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph_2",
+      "label": "Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "range_3",
+      "label": "Box 3 range"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading_3",
+      "label": "Sub heading"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph_3",
+      "label": "Paragraph"
+    },
+  ]
+}
+{% endschema %}

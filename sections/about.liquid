@@ -1,0 +1,107 @@
+<link href="{{ '../assets/about.css' | asset_url }}" rel="stylesheet" type="text/css">
+<link href="{{ '../assets/typography.css' | asset_url }}" rel="stylesheet" type="text/css">
+
+<section class="about-section">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content">
+                <div class="about-content-inner">
+                    <h1 class="heading-1">
+                        {{ section.settings.main_heading | default: 'Lorem ipsum dolor sit amet consectetur' }}</span>
+                    </h1>
+                    <p class="about-description p-1">
+                       {{ section.settings.paragraph | default: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.' }}
+                        
+                    </p>
+                </div>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="#2f75ff" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="heading-4">{{ section.settings.point_heading_1 | default: 'Lorem ipsum dolor' }}</span></h4>
+                            <p class="p-4">
+                               {{ section.settings.point_paragraph_1 | default: ' Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.' }}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="#2f75ff" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="heading-4">{{ section.settings.point_heading_2 | default: 'Lorem ipsum dolor' }}</h4>
+                            <p>
+                                {{ section.settings.point_paragraph_2 | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.' }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+              <img src="{{  section.settings.about_image | image_url: width: 600 }}" alt="Business team">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "About",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "point_heading_1",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "point_paragraph_1",
+      "label": "Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "point_heading_2",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "point_paragraph_2",
+      "label": "Paragraph"
+    },
+   {
+      "type": "image_picker",
+      "id": "about_image",
+      "label": "About Image"
+    },
+  ],
+  "presets": [
+    {
+      "name": "About"
+    }
+  ]
+}
+{% endschema %}

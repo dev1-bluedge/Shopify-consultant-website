@@ -1,0 +1,109 @@
+<link href="{{ '../assets/cards.css' | asset_url }}" rel="stylesheet" type="text/css">
+<link href="{{ '../assets/typography.css' | asset_url }}" rel="stylesheet" type="text/css">
+
+<section class="services-intro">
+  <div class="container">
+    <div class="services-header">
+      <h1 class="heading-1">{{ section.settings.main_heading | default: 'Lorem ipsum dolor sit amet consectetur' }}</h1>
+      <h2 class="italic heading-2">{{ section.settings.sub_heading | default: 'consectetur adipiscing elit.' }}</h2>
+    </div>
+    <div class="services-cards">
+      <div class="service-card">
+        <h3 class="heading-3">{{ section.settings.card_heading_1 | default: 'Business Strategy' }}</h3>
+        <p class="p-1">
+          {{
+            section.settings.card_paragraph_1
+            | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.'
+          }}
+        </p>
+        <button class="cards-btn">{{ section.settings.card_button_text_1 | default: 'Read now' }}</button>
+      </div>
+      <div class="service-card blue">
+        <h3 class="heading-3">{{ section.settings.card_heading_2 | default: 'Operational Excellence' }}</h3>
+        <p class="p-1">
+          {{ section.settings.card_paragraph_2 | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.' }}
+        </p>
+        <button class="cards-blue-btn">{{ section.settings.card_button_text_2 | default: 'Read now' }}</button>
+      </div>
+      <div class="service-card">
+        <h3 class="heading-3">{{ section.settings.card_heading_3 | default: 'Financial Advisory' }}</h3>
+        <p class="p-1">
+            {{ section.settings.card_paragraph_3 | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.' }}
+          
+        </p>
+        <button class="cards-btn">{{ section.settings.card_button_text_3 | default: 'Read now' }}</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cards",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Section heading"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "Sub heading"
+    },
+    {
+      "type": "text",
+      "id": "card_heading_1",
+      "label": "First card heading"
+    },
+    {
+      "type": "text",
+      "id": "card_paragraph_1",
+      "label": "First card paragraph"
+    },
+    {
+      "type": "text",
+      "id": "card_button_text_1",
+      "label": "First card Button text"
+    },
+    {
+      "type": "text",
+      "id": "card_heading_2",
+      "label": "Second card heading"
+    },
+    {
+      "type": "text",
+      "id": "card_paragraph_2",
+      "label": "Second card paragraph"
+    },
+    {
+      "type": "text",
+      "id": "card_button_text_2",
+      "label": "Second card Button text"
+    },
+    {
+      "type": "text",
+      "id": "card_heading_3",
+      "label": "Third card heading"
+    },
+    {
+      "type": "text",
+      "id": "card_paragraph_3",
+      "label": "Third card paragraph"
+    },
+    {
+      "type": "text",
+      "id": "card_button_text_3",
+      "label": "Third card Button text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cards"
+    }
+  ]
+}
+{% endschema %}

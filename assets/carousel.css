@@ -32,11 +32,10 @@
 
 .testimonial-card {
   margin: 0 auto;
-  width: 550px;
+  max-width: 550px;
   background: #fff;
   color: #333;
   border-radius: 12px;
-  height: 331px;
   text-align: left;
   display: flex;
   align-items: center;
@@ -53,7 +52,7 @@
   font-weight: bolder;
 }
 .testimonial-text {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .testimonial-image {
   height: 305px;

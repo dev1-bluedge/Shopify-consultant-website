@@ -1,0 +1,129 @@
+<link href="{{ '../assets/about-2.css' | asset_url }}" rel="stylesheet" type="text/css">
+<link href="{{ '../assets/typography.css' | asset_url }}" rel="stylesheet" type="text/css">
+
+<section class="about-section">
+  <div class="container">
+    <img src="/images/vector.png" alt="" class="about-2-vector-image">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="{{ section.settings.about_2_image | image_url: width: 600 }}" alt="Business team">
+      </div>
+      <div class="about-content">
+        <div class="about-content-inner">
+          <h1 class="heading-1">
+            {{ section.settings.main_heading | default: 'Lorem ipsum dolor sit amet consectetur' }}
+          </h1>
+          <p class="about-description p-1">
+            {{
+              section.settings.paragraph
+              | default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.'
+            }}
+          </p>
+        </div>
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#2f75ff"
+                class="size-6"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="heading-4">{{ section.settings.point_heading_1 | default: 'Lorem ipsum dolor' }}</h4>
+              <p class="p-4">
+                {{
+                  section.settings.point_paragraph_1
+                  | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                }}
+              </p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#2f75ff"
+                class="size-6"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="heading-4">{{ section.settings.point_heading_2 | default: 'Lorem ipsum dolor' }}</h4>
+              <p>
+                {{
+                  section.settings.point_paragraph_2
+                  | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About v2",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "about_2_image",
+      "label": "About image"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "paragraph"
+    },
+    {
+      "type": "text",
+      "id": "point_heading_1",
+      "label": "Point heading 1"
+    },
+    {
+      "type": "text",
+      "id": "point_paragraph_1",
+      "label": "Point paragraph 1"
+    },
+    {
+      "type": "text",
+      "id": "point_heading_2",
+      "label": "Point heading 2"
+    },
+    {
+      "type": "text",
+      "id": "point_paragraph_2",
+      "label": "Point paragraph 2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About v2"
+    }
+  ]
+}
+{% endschema %}

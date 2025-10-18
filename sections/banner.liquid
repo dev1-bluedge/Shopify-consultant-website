@@ -1,0 +1,80 @@
+<link href="{{ '../assets/banner.css' | asset_url }}" rel="stylesheet" type="text/css">
+<link href="{{ '../assets/typography.css' | asset_url }}" rel="stylesheet" type="text/css">
+
+<section class="stats-bar">
+    <div class="container">
+
+        <div class="stats-row">
+            <div class="stat-item">
+                <div class="stat-value heading-1">{{ section.settings.box_1_heading | default: '1000' }}</div>
+                <div class="stat-label p-1">{{ section.settings.box_1_paragraph | default: 'Lorem ipsum dolor sit' }}</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value heading-1">{{ section.settings.box_2_heading | default: '92%' }}</div>
+                <div class="stat-label p-1">{{ section.settings.box_2_paragraph | default: 'Lorem ipsum dolor sit' }}</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value heading-1">{{ section.settings.box_3_heading | default: '1024' }}</div>
+                <div class="stat-label p-1">{{ section.settings.box_3_paragraph | default: 'Lorem ipsum dolor sit' }}</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value heading-1">{{ section.settings.box_2_heading | default: '85' }}</div>
+                <div class="stat-label p-1">{{ section.settings.box_2_paragraph | default: 'Lorem ipsum dolor sit' }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "box_1_heading",
+      "label": "Box 1 Heading"
+    },
+    {
+      "type": "text",
+      "id": "box_1_paragraph",
+      "label": "Box 1 paragraph"
+    },
+    {
+      "type": "text",
+      "id": "box_2_heading",
+      "label": "Box 2 Heading"
+    },
+    {
+      "type": "text",
+      "id": "box_2_paragraph",
+      "label": "Box 2 paragraph"
+    },
+    {
+      "type": "text",
+      "id": "box_3_heading",
+      "label": "Box 3 Heading"
+    },
+    {
+      "type": "text",
+      "id": "box_3_paragraph",
+      "label": "Box 3 paragraph"
+    },
+    {
+      "type": "text",
+      "id": "box_4_heading",
+      "label": "Box 4 Heading"
+    },
+    {
+      "type": "text",
+      "id": "box_4_paragraph",
+      "label": "Box 4 paragraph"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Banner"
+    }
+  ]
+}
+{% endschema %}

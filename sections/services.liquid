@@ -1,0 +1,285 @@
+<link href="{{ '../assets/services.css' | asset_url }}" rel="stylesheet" type="text/css">
+<link href="{{ '../assets/typography.css' | asset_url }}" rel="stylesheet" type="text/css">
+
+<section class="services-grid">
+  <div class="container">
+    <h2 class="p-1 main-title">{{ section.settings.top_heading | default: 'Services' }}</h2>
+    <h2 class="section-title heading-1">{{ section.settings.main_heading | default: 'Our Best Services' }}</h2>
+    <div class="services-row">
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="{{  section.settings.box_1_image | image_url: width: 600 }}" alt="box_1">
+        </div>
+        <h3 class="heading-3">{{ section.settings.box_1_heading | default: 'Business Analysis' }}</h3>
+        <p class="p-2">
+          {{
+            section.settings.box_1_paragraph
+            | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.'
+          }}
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="{{  section.settings.box_2_image | image_url: width: 600 }}" alt="box_2">
+        </div>
+        <h3 class="heading-3">{{ section.settings.box_2_heading | default: 'Report Analysis' }}</h3>
+        <p class="p-2">
+          {{
+            section.settings.box_2_paragraph
+            | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.'
+          }}
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="{{  section.settings.box_3_image | image_url: width: 600 }}" alt="box_3">
+        </div>
+        <h3 class="heading-3">{{ section.settings.box_3_heading | default: 'Best Planning' }}</h3>
+        <p class="p-2">
+          {{
+            section.settings.box_3_paragraph
+            | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.'
+          }}
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="{{  section.settings.box_4_image | image_url: width: 600 }}" alt="box_4">
+        </div>
+        <h3 class="heading-3">{{ section.settings.box_4_heading | default: 'Project Marketing' }}</h3>
+        <p class="p-2">
+          {{
+            section.settings.box_4_paragraph
+            | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.'
+          }}
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="{{  section.settings.box_5_image | image_url: width: 600 }}" alt="box_5">
+        </div>
+        <h3 class="heading-3">{{ section.settings.box_5_heading | default: 'Estate Planning' }}</h3>
+        <p class="p-2">
+          {{
+            section.settings.box_5_paragraph
+            | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.'
+          }}
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="{{  section.settings.box_6_image | image_url: width: 600 }}" alt="box_6">
+        </div>
+        <h3 class="heading-3">{{ section.settings.box_6_heading | default: 'Security Enhanced' }}</h3>
+        <p class="p-2">
+          {{
+            section.settings.box_6_paragraph
+            | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.'
+          }}
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="{{  section.settings.box_7_image | image_url: width: 600 }}" alt="box_7">
+        </div>
+        <h3 class="heading-3">{{ section.settings.box_7_heading | default: 'Cloud Consulting' }}</h3>
+        <p class="p-2">
+          {{
+            section.settings.box_7_paragraph
+            | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.'
+          }}
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="{{  section.settings.box_8_image | image_url: width: 600 }}" alt="banner_3">
+        </div>
+        <h3 class="heading-3">{{ section.settings.box_8_heading | default: 'Cryptocurrency' }}</h3>
+        <p class="p-2">
+          {{
+            section.settings.box_8_paragraph
+            | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.'
+          }}
+        </p>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="{{  section.settings.box_9_image | image_url: width: 600 }}" alt="box_9">
+        </div>
+        <h3 class="heading-3">{{ section.settings.box_9_heading | default: 'Business Analysis' }}</h3>
+        <p class="p-2">
+          {{
+            section.settings.box_9_paragraph
+            | default: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.'
+          }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Service",
+  "settings": [
+    {
+      "type": "text",
+      "id": "top_heading",
+      "label": "top heading"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "main heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "box_1_image",
+      "label": "Box Image 1"
+    },
+    {
+      "type": "text",
+      "id": "box_1_heading",
+      "label": "Box heading 1"
+    },
+    {
+      "type": "text",
+      "id": "box_1_paragraph",
+      "label": "Box paragraph 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "box_2_image",
+      "label": "Box Image 2"
+    },
+    {
+      "type": "text",
+      "id": "box_2_heading",
+      "label": "Box heading 2"
+    },
+    {
+      "type": "text",
+      "id": "box_2_paragraph",
+      "label": "Box paragraph 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "box_3_image",
+      "label": "Box Image 3"
+    },
+    {
+      "type": "text",
+      "id": "box_3_heading",
+      "label": "Box heading 3"
+    },
+    {
+      "type": "text",
+      "id": "box_3_paragraph",
+      "label": "Box paragraph 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "box_4_image",
+      "label": "Box Image 4"
+    },
+    {
+      "type": "text",
+      "id": "box_4_heading",
+      "label": "Box heading 4"
+    },
+    {
+      "type": "text",
+      "id": "box_4_paragraph",
+      "label": "Box paragraph 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "box_5_image",
+      "label": "Box Image 5"
+    },
+    {
+      "type": "text",
+      "id": "box_5_heading",
+      "label": "Box heading 5"
+    },
+    {
+      "type": "text",
+      "id": "box_5_paragraph",
+      "label": "Box paragraph 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "box_6_image",
+      "label": "Box Image 6"
+    },
+    {
+      "type": "text",
+      "id": "box_6_heading",
+      "label": "Box heading 6"
+    },
+    {
+      "type": "text",
+      "id": "box_6_paragraph",
+      "label": "Box paragraph 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "box_7_image",
+      "label": "Box Image 7"
+    },
+    {
+      "type": "text",
+      "id": "box_7_heading",
+      "label": "Box heading 7"
+    },
+    {
+      "type": "text",
+      "id": "box_7_paragraph",
+      "label": "Box paragraph 7"
+    },
+    {
+      "type": "image_picker",
+      "id": "box_8_image",
+      "label": "Box Image 8"
+    },
+    {
+      "type": "text",
+      "id": "box_8_heading",
+      "label": "Box heading 8"
+    },
+    {
+      "type": "text",
+      "id": "box_8_paragraph",
+      "label": "Box paragraph 8"
+    },
+    {
+      "type": "image_picker",
+      "id": "box_9_image",
+      "label": "Box Image 9"
+    },
+    {
+      "type": "text",
+      "id": "box_9_heading",
+      "label": "Box heading 9"
+    },
+    {
+      "type": "text",
+      "id": "box_9_paragraph",
+      "label": "Box paragraph 9"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service"
+    }
+  ]
+}
+{% endschema %}

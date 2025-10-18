@@ -1,0 +1,244 @@
+<link href="{{ '../assets/carousel.css' | asset_url }}" rel="stylesheet" type="text/css">
+<link href="{{ '../assets/typography.css' | asset_url }}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<section class="testimonials">
+    <div class="container">
+        <div class="testimonials-inner">
+            <h2 class="testimonials-title heading-1">Don't Listen To Us, Listen To Our </br> <span class="italic-client">Great
+                    Clients</span></h2>
+            <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                  <img src="{{  section.settings.image_1 | image_url: width: 600 }}" alt="banner_3">
+                            </div>
+                            <div class="client-review">
+                                <div class="testimonial-stars">★★★★★</div>
+                                <p class="testimonial-text p-2">{{ section.settings.paragraph_1 | default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }}</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h5 class="heading-5 client-name">{{ section.settings.owner_name_1 | default: 'Olivia Morris Here' }}</h5>
+                                        <p class="p-3">{{ section.settings.designation_1 | default: 'CEO, Company Name' }}</p>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                 <img src="{{  section.settings.image_2 | image_url: width: 600 }}" alt="banner_3">
+    
+                            </div>
+                            <div class="client-review">
+    
+                                <div class="testimonial-stars">★★★★★</div>
+                                <p class="testimonial-text p-2">{{ section.settings.paragraph_2 | default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }}"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h5 class="heading-5 client-name">{{ section.settings.owner_name_2 | default: 'Olivia Morris Here' }}</h5>
+                                        <p class="p-3">{{ section.settings.designation_2 | default: 'CEO, Company Name' }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                               <img src="{{  section.settings.image_3 | image_url: width: 600 }}" alt="banner_3">
+    
+                            </div>
+                            <div class="client-review">
+    
+                                <div class="testimonial-stars">★★★★★</div>
+                                <p class="testimonial-text p-2">{{ section.settings.paragraph_3 | default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }}"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                       <h5 class="heading-5 client-name">{{ section.settings.owner_name_3 | default: 'Olivia Morris Here' }}</h5>
+                                        <p class="p-3">{{ section.settings.designation_3 | default: 'CEO, Company Name' }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                              <img src="{{  section.settings.image_4 | image_url: width: 600 }}" alt="banner_3">
+                            </div>
+                            <div class="client-review">
+    
+                                <div class="testimonial-stars">★★★★★</div>
+                                <p class="testimonial-text p-2">{{ section.settings.paragraph_4 | default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }}"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h5 class="heading-5 client-name">{{ section.settings.owner_name_4 | default: 'CEO, Company Name' }}</h5>
+                                        <p class="p-3">{{ section.settings.designation_4 | default: 'CTO, Company Name' }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <!-- Navigation -->
+                <div class="testimonial-nav">
+                    <div class="client-nav-dot prev-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                    <div class="client-nav-dot next-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+    
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.testimonials-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.next-btn',
+            prevEl: '.prev-btn',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 1,
+            },
+            1024: {
+                slidesPerView: 2,
+            },
+        },
+    });
+</script>
+
+
+{% schema %}
+{
+  "name": "Carousel",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "text",
+      "id": "paragraph_1",
+      "label": "Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "owner_name_1",
+      "label": "Owner name"
+    },
+    {
+      "type": "text",
+      "id": "designation_1",
+      "label": "Designation"
+    },
+        {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "text",
+      "id": "paragraph_2",
+      "label": "Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "owner_name_2",
+      "label": "Owner name"
+    },
+    {
+      "type": "text",
+      "id": "designation_2",
+      "label": "Designation"
+    },
+      {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3"
+    },
+    {
+      "type": "text",
+      "id": "paragraph_3",
+      "label": "Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "owner_name_3",
+      "label": "Owner name"
+    },
+    {
+      "type": "text",
+      "id": "designation_3",
+      "label": "Designation"
+    },
+      {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image 4"
+    },
+    {
+      "type": "text",
+      "id": "paragraph_4",
+      "label": "Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "owner_name_4",
+      "label": "Owner name"
+    },
+    {
+      "type": "text",
+      "id": "designation_4",
+      "label": "Designation"
+    },
+ 
+  ],
+  "presets": [
+    {
+      "name": "Carousel"
+    }
+  ]
+}
+{% endschema %}
